@@ -1,0 +1,166 @@
+@keyframes bootFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--window-x, 0), var(--window-y, 0), 0) scale(0.86);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes windowPopIn {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--window-x, 0), calc(var(--window-y, 0) + 10px), 0) scale(0.985);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(var(--window-x, 0), var(--window-y, 0), 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes windowClose {
+  from {
+    opacity: 1;
+    transform: translate3d(var(--window-x, 0), var(--window-y, 0), 0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(var(--window-x, 0), var(--window-y, 0), 0) scale(0.94);
+    filter: blur(8px);
+  }
+}
+
+@keyframes windowMinimize {
+  from {
+    opacity: 1;
+    transform: translate3d(var(--window-x, 0), var(--window-y, 0), 0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(var(--window-x, 0), calc(var(--window-y, 0) + 22vh), 0) scale(0.84);
+    filter: blur(4px);
+  }
+}
+
+@keyframes dockBounce {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  35% {
+    translate: 0 -18px;
+  }
+  65% {
+    translate: 0 -7px;
+  }
+}
+
+@keyframes pulseGreen {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.42);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(52, 199, 89, 0);
+  }
+}
+
+@keyframes shakeWindow {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: -6px 0;
+  }
+  75% {
+    translate: 6px 0;
+  }
+}
+
+@keyframes skillFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-progress);
+  }
+}
+
+@keyframes radarDraw {
+  from {
+    transform: scale(0.72);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes envelopeFly {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  55% {
+    transform: translate3d(16px, -14px, 0) rotate(14deg);
+  }
+  100% {
+    transform: translate3d(36px, -28px, 0) rotate(22deg);
+    opacity: 0;
+  }
+}
+
+@keyframes confettiFall {
+  from {
+    top: -24px;
+    opacity: 1;
+  }
+  to {
+    top: 105vh;
+    opacity: 0;
+  }
+}
+
+@keyframes cursorTrailFade {
+  from {
+    opacity: 0.72;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
