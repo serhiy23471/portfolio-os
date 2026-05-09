@@ -283,6 +283,36 @@ const experienceEnglish: Record<string, Pick<ExperienceItem, 'role' | 'company' 
       'Improved responsiveness, page performance, basic optimization, and preparation for public launch.',
     ],
   },
+  'portfolio-os': {
+    company: 'Portfolio OS',
+    role: 'Frontend Developer',
+    highlights: [
+      'Created an interactive portfolio in a desktop OS style with windows, dock, boot screen, terminal, and a separate mobile version.',
+      'Built a window manager with open, close, focus, minimize, maximize, position, and z-index states.',
+      'Moved profile, projects, certificates, skills, and experience into a data-driven structure for fast content updates.',
+      'Added project detail windows, case study pages, terminal commands, theme switching, and a responsive mobile fallback.',
+    ],
+  },
+  'nice-gadgets': {
+    company: 'Nice Gadgets',
+    role: 'Frontend Developer',
+    highlights: [
+      'Developed a responsive phone catalog with categories, product cards, product detail pages, search, and sorting.',
+      'Implemented client-side cart and favorites logic without page reloads.',
+      'Built reusable UI components for catalog layout, product cards, navigation, empty states, and responsive grids.',
+      'Prepared GitHub Pages deployment and a dedicated case study describing the architecture and user flow.',
+    ],
+  },
+  'ui-kit': {
+    company: 'UI Kit',
+    role: 'Frontend Developer',
+    highlights: [
+      'Created a reusable UI component set for pet projects: buttons, inputs, modals, tabs, cards, and form states.',
+      'Covered hover, focus, loading, disabled, and error states so components behave predictably in different scenarios.',
+      'Used CSS variables for colors, spacing, and basic tokens to keep the visual style easier to maintain.',
+      'Focused on accessibility, keyboard states, and clean component structure.',
+    ],
+  },
 };
 
 export function getWindowTitle(id: WindowId, fallback: string, language: Language) {

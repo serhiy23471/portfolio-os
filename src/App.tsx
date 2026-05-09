@@ -1,5 +1,6 @@
 import { Desktop } from './components/Desktop/Desktop';
 import { MyrMyrCaseStudy } from './components/CaseStudies/MyrMyrCaseStudy';
+import { NiceGadgetsCaseStudy } from './components/CaseStudies/NiceGadgetsCaseStudy';
 import { PortfolioOsCaseStudy } from './components/CaseStudies/PortfolioOsCaseStudy';
 import { MobilePortfolio } from './components/Mobile/MobilePortfolio';
 import { useMediaQuery } from './hooks/useMediaQuery';
@@ -9,6 +10,7 @@ export default function App() {
   const pathname = window.location.pathname;
 
   if (pathname === '/case-studies/myr-myr-project') return <MyrMyrCaseStudy />;
+  if (pathname === '/case-studies/nice-gadgets') return <NiceGadgetsCaseStudy />;
   if (pathname === '/case-studies/portfolio-os') return <PortfolioOsCaseStudy />;
 
   return isMobile ? <MobilePortfolio /> : <Desktop />;

@@ -2755,6 +2755,95 @@ p {
   color: #dbeafe;
 }
 
+.caseStudyPageGadgets {
+  background:
+    radial-gradient(circle at 78% 9%, rgba(160, 112, 255, 0.2), transparent 28rem),
+    radial-gradient(circle at 16% 22%, rgba(246, 194, 63, 0.12), transparent 20rem),
+    linear-gradient(180deg, #11131f 0%, #1b1d29 46%, #141622 100%);
+  color: #f4f4fb;
+}
+
+.caseStudyPageGadgets .caseStudyNav {
+  border-bottom-color: rgba(244, 244, 251, 0.14);
+  background: rgba(17, 19, 31, 0.82);
+}
+
+.caseStudyPageGadgets .caseStudyNav a,
+.caseStudyPageGadgets .caseStudyBrand,
+.caseStudyPageGadgets .caseStudyHero p,
+.caseStudyPageGadgets .caseStudySection > p,
+.caseStudyPageGadgets .caseStudyResult > p,
+.caseStudyPageGadgets .caseStudyCards p,
+.caseStudyPageGadgets .caseStudyColumns p,
+.caseStudyPageGadgets .caseStudyFeatureGrid p {
+  color: #aeb4c7;
+}
+
+.caseStudyPageGadgets .caseStudyHero h1 {
+  text-shadow: 0 10px 40px rgba(160, 112, 255, 0.26);
+}
+
+.caseStudyPageGadgets .caseStudyEyebrow,
+.caseStudyPageGadgets .caseStudyHeroLinks a {
+  border-color: rgba(160, 112, 255, 0.34);
+  background: rgba(160, 112, 255, 0.12);
+  color: #e7ddff;
+}
+
+.caseStudyPageGadgets .caseStudyNav a.isPrimary {
+  border-color: rgba(244, 244, 251, 0.82);
+  background: linear-gradient(135deg, #f4f4fb, #aeb4c7);
+  color: #11131f;
+}
+
+.caseStudyPageGadgets .caseStudyTags span,
+.caseStudyPageGadgets .caseStudyResult span {
+  border-color: rgba(244, 244, 251, 0.13);
+  background: rgba(244, 244, 251, 0.055);
+  color: #f4f4fb;
+}
+
+.caseStudyPageGadgets .caseStudyCards article,
+.caseStudyPageGadgets .caseStudyColumns article,
+.caseStudyPageGadgets .caseStudyFeatureGrid article {
+  border-color: rgba(244, 244, 251, 0.13);
+  background:
+    linear-gradient(180deg, rgba(244, 244, 251, 0.055), rgba(244, 244, 251, 0.025)),
+    rgba(27, 29, 41, 0.82);
+}
+
+.caseStudyPageGadgets .caseStudyCards svg,
+.caseStudyPageGadgets .caseStudyColumns svg,
+.caseStudyPageGadgets .caseStudyFeatureGrid svg,
+.caseStudyPageGadgets .caseStudyBrand svg {
+  color: #f6c23f;
+}
+
+.caseStudyPageGadgets .caseStudyFlow span {
+  border-color: rgba(160, 112, 255, 0.34);
+  background: rgba(160, 112, 255, 0.11);
+  color: #f4f4fb;
+}
+
+.caseStudyPageGadgets .caseStudyPreview {
+  border-color: rgba(244, 244, 251, 0.16);
+  background:
+    linear-gradient(180deg, rgba(27, 29, 41, 0.88), rgba(17, 19, 31, 0.92)),
+    #11131f;
+}
+
+.caseStudyPageGadgets .caseStudyResult {
+  border-color: rgba(160, 112, 255, 0.34);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(160, 112, 255, 0.22), transparent 22rem),
+    linear-gradient(135deg, rgba(244, 244, 251, 0.07), rgba(160, 112, 255, 0.08)),
+    rgba(17, 19, 31, 0.92);
+}
+
+.caseStudyPageGadgets .caseStudyResult svg {
+  color: #f6c23f;
+}
+
 @media (max-width: 900px) {
   .caseStudyHero,
   .caseStudyCards,
