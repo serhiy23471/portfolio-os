@@ -1178,6 +1178,9 @@ p {
 }
 
 .projectCard {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: var(--radius-md);
@@ -1277,7 +1280,10 @@ p {
 }
 
 .projectMeta {
-  display: grid;
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
   gap: 9px;
   padding: 14px;
 }
@@ -1288,10 +1294,21 @@ p {
 }
 
 .projectMeta p {
+  display: -webkit-box;
+  min-height: calc(1.65em * 4);
+  overflow: hidden;
   font-size: 13px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.projectMeta .stackRow {
+  min-height: 62px;
+  align-content: start;
 }
 
 .projectStats {
+  margin-top: auto;
   color: var(--text-secondary);
   font-size: 12px;
   font-weight: 800;
@@ -1311,6 +1328,11 @@ p {
 .projectCollection.isList .projectCard {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.projectCollection.isList .projectMeta p,
+.projectCollection.isList .projectMeta .stackRow {
+  min-height: 0;
 }
 
 .projectDetail {
@@ -2842,6 +2864,363 @@ p {
 
 .caseStudyPageGadgets .caseStudyResult svg {
   color: #f6c23f;
+}
+
+.caseStudyPageUiKit {
+  background:
+    radial-gradient(circle at 78% 9%, rgba(124, 58, 237, 0.28), transparent 28rem),
+    radial-gradient(circle at 14% 24%, rgba(34, 211, 238, 0.14), transparent 22rem),
+    linear-gradient(180deg, #11101f 0%, #151225 44%, #080b16 100%);
+  color: #f8f7ff;
+}
+
+.caseStudyPageUiKit .caseStudyHero h1 {
+  text-shadow: 0 10px 40px rgba(124, 58, 237, 0.32);
+}
+
+.caseStudyPageUiKit .caseStudyEyebrow,
+.caseStudyPageUiKit .caseStudyHeroLinks a {
+  border-color: rgba(124, 58, 237, 0.42);
+  background: rgba(124, 58, 237, 0.14);
+  color: #ede9fe;
+}
+
+.caseStudyPageUiKit .caseStudyNav a.isPrimary {
+  border-color: rgba(34, 211, 238, 0.72);
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+}
+
+.caseStudyPageUiKit .caseStudyCards article,
+.caseStudyPageUiKit .caseStudyColumns article,
+.caseStudyPageUiKit .caseStudyFeatureGrid article {
+  background:
+    linear-gradient(180deg, rgba(248, 247, 255, 0.065), rgba(248, 247, 255, 0.028)),
+    rgba(18, 18, 34, 0.84);
+}
+
+.caseStudyPageUiKit .caseStudyCards svg,
+.caseStudyPageUiKit .caseStudyColumns svg,
+.caseStudyPageUiKit .caseStudyFeatureGrid svg,
+.caseStudyPageUiKit .caseStudyBrand svg {
+  color: #a78bfa;
+}
+
+.caseStudyPageUiKit .caseStudyFlow span {
+  border-color: rgba(124, 58, 237, 0.42);
+  background: rgba(124, 58, 237, 0.13);
+  color: #ede9fe;
+}
+
+.caseStudyPageUiKit .caseStudyResult {
+  border-color: rgba(124, 58, 237, 0.42);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(34, 211, 238, 0.2), transparent 22rem),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(255, 255, 255, 0.035)),
+    rgba(18, 18, 34, 0.92);
+}
+
+.uiKitDemoPage {
+  min-height: 100vh;
+  padding: 0 22px 70px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 84% 8%, rgba(124, 58, 237, 0.24), transparent 28rem),
+    radial-gradient(circle at 12% 28%, rgba(34, 211, 238, 0.14), transparent 22rem),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 46%, #ecfeff 100%);
+  color: #111827;
+  font-family: var(--font-ui);
+}
+
+.uiKitDemoNav,
+.uiKitDemoShell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.uiKitDemoNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+.uiKitDemoBrand,
+.uiKitDemoNav div,
+.uiKitDemoNav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.uiKitDemoBrand,
+.uiKitDemoNav a {
+  color: #111827;
+  font-weight: 900;
+}
+
+.uiKitDemoNav div {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.uiKitDemoNav a:not(.uiKitDemoBrand) {
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.uiKitDemoShell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(460px, 1.22fr);
+  gap: 28px;
+  align-items: stretch;
+  padding-top: 34px;
+}
+
+.uiKitDemoHero,
+.uiKitDemoPanel,
+.uiKitCard,
+.uiKitModal {
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 70px rgba(31, 41, 55, 0.12);
+}
+
+.uiKitDemoHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+}
+
+.uiKitDemoHero p,
+.uiKitFormHint {
+  margin: 0;
+  color: #64748b;
+  font-weight: 800;
+}
+
+.uiKitDemoHero h1 {
+  margin: 12px 0 24px;
+  color: #111827;
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: 1.02;
+}
+
+.uiKitDemoHero div,
+.uiKitModal div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.uiKitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.uiKitButton.primary {
+  background: linear-gradient(135deg, #7c3aed, #0891b2);
+  color: #fff;
+}
+
+.uiKitButton.secondary,
+.uiKitButton.compact {
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.uiKitButton.compact {
+  width: fit-content;
+  min-height: 36px;
+}
+
+.uiKitButton:focus-visible,
+.uiKitTabs button:focus-visible {
+  outline: 3px solid rgba(34, 211, 238, 0.42);
+  outline-offset: 2px;
+}
+
+.uiKitForm input:focus,
+.uiKitForm textarea:focus {
+  border-color: #22d3ee;
+  box-shadow: inset 0 0 0 2px rgba(34, 211, 238, 0.35), 0 0 0 1px rgba(34, 211, 238, 0.12);
+  outline: 0;
+}
+
+.uiKitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uiKitButton.isLoading svg {
+  animation: uiKitSpin 900ms linear infinite;
+}
+
+.uiKitDemoPanel {
+  padding: 18px;
+}
+
+.uiKitTabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #eef2ff;
+}
+
+.uiKitTabs button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.uiKitTabs button.isActive {
+  background: #111827;
+  color: #fff;
+}
+
+.uiKitDemoGrid,
+.uiKitStateGrid,
+.uiKitForm {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.uiKitDemoGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.uiKitCard {
+  display: grid;
+  gap: 12px;
+  min-height: 250px;
+  padding: 20px;
+}
+
+.uiKitCard h2,
+.uiKitModal h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.uiKitCard p,
+.uiKitModal p {
+  margin: 0;
+  color: #64748b;
+}
+
+.uiKitIcon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 8px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-weight: 1000;
+}
+
+.uiKitIcon.success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.uiKitBadge {
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.uiKitForm label {
+  display: grid;
+  gap: 7px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.uiKitForm input,
+.uiKitForm textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+}
+
+.uiKitForm input {
+  min-height: 44px;
+  padding: 0 13px;
+}
+
+.uiKitForm textarea {
+  min-height: 110px;
+  padding: 12px 13px;
+  resize: vertical;
+}
+
+.uiKitStateGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.uiKitModalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  padding: 18px;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.56);
+}
+
+.uiKitModal {
+  display: grid;
+  gap: 16px;
+  width: min(420px, 100%);
+  padding: 24px;
+}
+
+@keyframes uiKitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .uiKitDemoShell,
+  .uiKitDemoGrid,
+  .uiKitStateGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .uiKitDemoNav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 900px) {

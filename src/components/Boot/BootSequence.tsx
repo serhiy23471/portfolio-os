@@ -4,7 +4,7 @@ import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useDesktopStore } from '../../store/desktopStore';
 
 const bootLines = [
-  'Initializing Portfolio OS v2.0...',
+  'Initializing Portfolio OS v1.0...',
   'Loading components...      ████░░ 67%',
   'Mounting React tree...     ██████ 100%',
   'Preparing frosted desktop...',
