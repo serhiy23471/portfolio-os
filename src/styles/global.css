@@ -2475,6 +2475,23 @@ p {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.caseStudyLanguageButton {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff7f4;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.caseStudyLanguageButton:hover,
+.caseStudyLanguageButton:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  outline: 0;
+}
+
 .caseStudyNav a.isPrimary {
   border-color: rgba(250, 58, 58, 0.8);
   background: linear-gradient(135deg, #fa3a3a, #8e1014);
@@ -2917,6 +2934,60 @@ p {
     radial-gradient(circle at 90% 12%, rgba(34, 211, 238, 0.2), transparent 22rem),
     linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(255, 255, 255, 0.035)),
     rgba(18, 18, 34, 0.92);
+}
+
+.caseStudyPage2048 {
+  background:
+    radial-gradient(circle at 80% 8%, rgba(245, 158, 11, 0.24), transparent 28rem),
+    radial-gradient(circle at 12% 24%, rgba(20, 184, 166, 0.15), transparent 22rem),
+    linear-gradient(180deg, #17140b 0%, #111827 44%, #05070b 100%);
+  color: #fffaf0;
+}
+
+.caseStudyPage2048 .caseStudyHero h1 {
+  text-shadow: 0 10px 40px rgba(245, 158, 11, 0.28);
+}
+
+.caseStudyPage2048 .caseStudyEyebrow,
+.caseStudyPage2048 .caseStudyHeroLinks a {
+  border-color: rgba(245, 158, 11, 0.42);
+  background: rgba(245, 158, 11, 0.13);
+  color: #ffedd5;
+}
+
+.caseStudyPage2048 .caseStudyNav a.isPrimary {
+  border-color: rgba(20, 184, 166, 0.76);
+  background: linear-gradient(135deg, #f59e0b, #0f766e);
+  color: #fffaf0;
+}
+
+.caseStudyPage2048 .caseStudyCards article,
+.caseStudyPage2048 .caseStudyColumns article,
+.caseStudyPage2048 .caseStudyFeatureGrid article {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.07), rgba(255, 250, 240, 0.03)),
+    rgba(17, 24, 39, 0.86);
+}
+
+.caseStudyPage2048 .caseStudyCards svg,
+.caseStudyPage2048 .caseStudyColumns svg,
+.caseStudyPage2048 .caseStudyFeatureGrid svg,
+.caseStudyPage2048 .caseStudyBrand svg {
+  color: #fbbf24;
+}
+
+.caseStudyPage2048 .caseStudyFlow span {
+  border-color: rgba(245, 158, 11, 0.42);
+  background: rgba(245, 158, 11, 0.12);
+  color: #ffedd5;
+}
+
+.caseStudyPage2048 .caseStudyResult {
+  border-color: rgba(245, 158, 11, 0.42);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(20, 184, 166, 0.19), transparent 22rem),
+    linear-gradient(135deg, rgba(245, 158, 11, 0.17), rgba(255, 255, 255, 0.035)),
+    rgba(17, 24, 39, 0.94);
 }
 
 .uiKitDemoPage {

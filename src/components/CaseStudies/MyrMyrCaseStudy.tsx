@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 import { useEffect } from 'react';
+import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
 
 const overviewItems = ['ігровий сервер', 'власний вебсайт', 'Steam авторизацію', 'систему скінів', 'адмін-панель', 'систему тікетів', 'live моніторинг серверу', 'кастомний UI у стилі gaming/community platform'];
 
@@ -215,6 +216,7 @@ export function MyrMyrCaseStudy() {
           <a className="isPrimary" href="https://myr-myr.fun/" target="_blank" rel="noreferrer">
             Live Project
           </a>
+          <CaseStudyLanguageSwitch />
         </div>
       </nav>
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { FaCheck, FaCode, FaDesktop, FaGithub, FaLayerGroup, FaMobileAlt, FaMousePointer, FaProjectDiagram, FaReact, FaTerminal, FaTools, FaWindowMaximize } from 'react-icons/fa';
+import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
 
 const overviewItems = [
   'desktop OS metaphor',
@@ -152,6 +153,7 @@ export function PortfolioOsCaseStudy() {
           <a className="isPrimary" href="https://example.com/portfolio-os" target="_blank" rel="noreferrer">
             Live Demo
           </a>
+          <CaseStudyLanguageSwitch />
         </div>
       </nav>
 

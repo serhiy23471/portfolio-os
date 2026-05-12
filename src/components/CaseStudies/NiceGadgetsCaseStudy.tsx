@@ -13,6 +13,7 @@ import {
   FaSearch,
   FaShoppingCart,
 } from 'react-icons/fa';
+import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
 
 const overviewItems = [
   'phone catalog',
@@ -167,6 +168,7 @@ export function NiceGadgetsCaseStudy() {
           <a className="isPrimary" href="https://serhiy23471.github.io/react_phone-catalog/#/" target="_blank" rel="noreferrer">
             Live Demo
           </a>
+          <CaseStudyLanguageSwitch />
         </div>
       </nav>
 

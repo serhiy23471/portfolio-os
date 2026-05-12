@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { FaCheck, FaCode, FaGithub, FaKeyboard, FaLayerGroup, FaPalette, FaReact, FaUniversalAccess } from 'react-icons/fa';
+import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
 
 const overviewItems = [
   'варіанти кнопок',
@@ -112,6 +113,7 @@ export function UiKitCaseStudy() {
           <a className="isPrimary" href="/demos/ui-kit">
             Demo
           </a>
+          <CaseStudyLanguageSwitch />
         </div>
       </nav>
 

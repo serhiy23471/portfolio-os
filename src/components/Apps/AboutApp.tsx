@@ -133,10 +133,10 @@ function createResumePdf() {
         ],
       },
       {
-        title: 'UI Kit | Frontend Developer | Sep 2025 - Oct 2025',
+        title: '2048 Game | Frontend Developer | Sep 2025 - Oct 2025',
         items: [
-          'Created reusable UI components for pet projects: buttons, inputs, modals, tabs, cards, and form states.',
-          'Covered hover, focus, loading, disabled, and error states with CSS variables and accessible focus styles.',
+          'Built a playable 2048 puzzle game with JavaScript, SCSS, HTML, tile movement, merge rules, score tracking, and restart flow.',
+          'Added keyboard-friendly controls, invalid move handling, and a responsive board layout.',
         ],
       },
     ],

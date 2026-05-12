@@ -230,6 +230,11 @@ const projectEnglish: Record<string, Pick<Project, 'description' | 'problem' | '
     problem: 'The server needed a clear public page that quickly explains why players should join: SkinChanger, statistics, VIP options, and both competitive and fun gameplay.',
     solution: 'I built a focused gaming landing page with dark visual styling, SEO and social preview metadata, feature sections, and a direct live domain for players.',
   },
+  'nice-gadgets': {
+    description: 'Responsive phone catalog with product cards, category pages, search, sorting, favorites, cart logic, and detailed product pages.',
+    problem: 'A phone store catalog needs to stay fast and readable while users browse many products, compare details, save favorites, and manage a cart without page reloads.',
+    solution: 'I built a React catalog with reusable UI components, route-based product pages, client-side state for cart and favorites, responsive layouts, and predictable catalog filtering.',
+  },
   'admin-pulse': {
     description: 'A dashboard with tables, filters, charts, and compact operational UI.',
     problem: 'Operational teams need dense interfaces without marketing-style sections.',
@@ -240,10 +245,10 @@ const projectEnglish: Record<string, Pick<Project, 'description' | 'problem' | '
     problem: 'Pet projects often duplicate the same UI decisions without consistent states.',
     solution: 'I built a compact component library with focus states, tokens, and a demo page.',
   },
-  'ui-kit': {
-    description: 'Reusable buttons, inputs, modals, tabs, cards, and form states for pet projects.',
-    problem: 'Repeated UI decisions slow projects down and often miss focus, hover, loading, or error states.',
-    solution: 'I created consistent components with CSS variables, accessible focus states, and compact examples.',
+  '2048-game': {
+    description: 'Playable 2048 puzzle game with tile movement, merge logic, score tracking, restart flow, and responsive layout.',
+    problem: 'A small game still needs reliable rules: tiles should merge once per move, invalid moves should not spawn new tiles, and the board should stay comfortable on desktop and mobile.',
+    solution: 'I built a JavaScript game with clear board logic, move handling, score updates, responsive SCSS layout, and a focused Vercel demo.',
   },
   'form-kit': {
     description: 'Form patterns with realtime validation, masks, and accessible errors.',
@@ -303,14 +308,14 @@ const experienceEnglish: Record<string, Pick<ExperienceItem, 'role' | 'company' 
       'Prepared GitHub Pages deployment and a dedicated case study describing the architecture and user flow.',
     ],
   },
-  'ui-kit': {
-    company: 'UI Kit',
+  '2048-game': {
+    company: '2048 Game',
     role: 'Frontend Developer',
     highlights: [
-      'Created a reusable UI component set for pet projects: buttons, inputs, modals, tabs, cards, and form states.',
-      'Covered hover, focus, loading, disabled, and error states so components behave predictably in different scenarios.',
-      'Used CSS variables for colors, spacing, and basic tokens to keep the visual style easier to maintain.',
-      'Focused on accessibility, keyboard states, and clean component structure.',
+      'Built a playable 2048 puzzle game with JavaScript, SCSS, HTML, tile movement, merge rules, score tracking, and restart flow.',
+      'Implemented board state updates so invalid moves do not spawn new tiles or change the score.',
+      'Added keyboard-friendly controls and responsive layout for desktop and mobile screens.',
+      'Prepared a live Vercel deployment and a dedicated case study with demo and GitHub links.',
     ],
   },
 };
