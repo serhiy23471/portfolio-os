@@ -35,7 +35,7 @@ export const experience: ExperienceItem[] = [
     period: '2026',
     startDate: '2026-02-01',
     type: 'Learning',
-    stack: ['React', 'TypeScript', 'Zustand', 'Vite', 'CSS'],
+    stack: ['React', 'TypeScript', 'Zustand', 'Vite', 'SCSS'],
     highlights: [
       'Створив інтерактивне портфоліо у стилі desktop OS з вікнами, dock, boot screen, terminal і мобільною версією.',
       'Побудував window manager зі станами open, close, focus, minimize, maximize, position і z-index.',

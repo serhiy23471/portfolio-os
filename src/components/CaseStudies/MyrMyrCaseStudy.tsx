@@ -17,6 +17,7 @@ import {
 import type { IconType } from 'react-icons';
 import { useEffect } from 'react';
 import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const overviewItems = ['ігровий сервер', 'власний вебсайт', 'Steam авторизацію', 'систему скінів', 'адмін-панель', 'систему тікетів', 'live моніторинг серверу', 'кастомний UI у стилі gaming/community platform'];
 
@@ -38,101 +39,101 @@ const features: Array<{
   intro: string;
   groups: Array<{ title: string; items: string[] }>;
 }> = [
-  {
-    Icon: FaSteam,
-    title: 'Steam Authentication',
-    intro: 'Було реалізовано повну Steam OpenID авторизацію. Також було перероблено serialize/deserialize логіку для стабільності після рестартів сервера.',
-    groups: [
-      {
-        title: 'Authentication flow',
-        items: ['login/logout', 'Steam avatar sync', 'профіль гравця', 'persistent sessions', 'secure cookies', 'Express session handling'],
-      },
-    ],
-  },
-  {
-    Icon: FaPaintBrush,
-    title: 'Advanced SkinChanger System',
-    intro: 'Було створено повністю кастомний інтерфейс для керування loadout і косметичними елементами гравця.',
-    groups: [
-      {
-        title: 'Supported customization',
-        items: ['weapon skins', 'knives', 'gloves', 'agents', 'music kits', 'pins', 'stickers', 'StatTrak', 'float/seed settings'],
-      },
-      {
-        title: 'API Endpoints',
-        items: ['/api/skins/all', '/api/skins/weapon', '/api/skins/knife', '/api/skins/gloves', '/api/skins/music', '/api/skins/pin'],
-      },
-      {
-        title: 'UI System',
-        items: ['sidebar navigation', 'rarity colors', 'live selected loadout preview', 'weapon search', 'rarity sorting', 'responsive cards', 'animated modals'],
-      },
-    ],
-  },
-  {
-    Icon: FaTools,
-    title: 'Admin Panel',
-    intro: 'Одна з ключових частин платформи — власна адмін система для керування сервером і модерації.',
-    groups: [
-      {
-        title: 'Dashboard',
-        items: ['live online', 'current map', 'server IP', 'DatHost metrics'],
-      },
-      {
-        title: 'Server Management',
-        items: ['console commands', 'start/stop server', 'player management'],
-      },
-      {
-        title: 'Moderation',
-        items: ['bans', 'mutes', 'VIP management', 'admin management', 'audit logs'],
-      },
-    ],
-  },
-  {
-    Icon: FaTicketAlt,
-    title: 'Ticket System',
-    intro: 'Було створено повноцінну support систему. Особливу увагу було приділено UX для діалогів, вкладень і довгих повідомлень.',
-    groups: [
-      {
-        title: 'Features',
-        items: ['image uploads', 'live chat', 'admin replies', 'ticket statuses', 'sticky ticket lists', 'image lightbox', 'expandable history'],
-      },
-      {
-        title: 'UX details',
-        items: ['chat bubble styling', 'responsive layout', 'long text wrapping', 'modal previews', 'attachment handling'],
-      },
-    ],
-  },
-  {
-    Icon: FaChartLine,
-    title: 'Real-Time Server Integration',
-    intro: 'Сайт отримує дані в реальному часі, а оновлення відбувається автоматично кожні 30 секунд.',
-    groups: [
-      {
-        title: 'Live Server Data',
-        items: ['online players', 'server status', 'current map', 'server metrics', 'player lists'],
-      },
-      {
-        title: 'Technologies Used',
-        items: ['GameDig', 'DatHost API'],
-      },
-    ],
-  },
-  {
-    Icon: FaLayerGroup,
-    title: 'Responsive Experience',
-    intro: 'Було адаптовано основні частини інтерфейсу і додано мобільні патерни навігації.',
-    groups: [
-      {
-        title: 'Adapted areas',
-        items: ['Hero section', 'Navbar', 'Players', 'Tables', 'Comments system', 'Mobile menu'],
-      },
-      {
-        title: 'Added',
-        items: ['hamburger navigation', 'responsive grids', 'mobile-friendly layouts'],
-      },
-    ],
-  },
-];
+    {
+      Icon: FaSteam,
+      title: 'Steam Authentication',
+      intro: 'Було реалізовано повну Steam OpenID авторизацію. Також було перероблено serialize/deserialize логіку для стабільності після рестартів сервера.',
+      groups: [
+        {
+          title: 'Authentication flow',
+          items: ['login/logout', 'Steam avatar sync', 'профіль гравця', 'persistent sessions', 'secure cookies', 'Express session handling'],
+        },
+      ],
+    },
+    {
+      Icon: FaPaintBrush,
+      title: 'Advanced SkinChanger System',
+      intro: 'Було створено повністю кастомний інтерфейс для керування loadout і косметичними елементами гравця.',
+      groups: [
+        {
+          title: 'Supported customization',
+          items: ['weapon skins', 'knives', 'gloves', 'agents', 'music kits', 'pins', 'stickers', 'StatTrak', 'float/seed settings'],
+        },
+        {
+          title: 'API Endpoints',
+          items: ['/api/skins/all', '/api/skins/weapon', '/api/skins/knife', '/api/skins/gloves', '/api/skins/music', '/api/skins/pin'],
+        },
+        {
+          title: 'UI System',
+          items: ['sidebar navigation', 'rarity colors', 'live selected loadout preview', 'weapon search', 'rarity sorting', 'responsive cards', 'animated modals'],
+        },
+      ],
+    },
+    {
+      Icon: FaTools,
+      title: 'Admin Panel',
+      intro: 'Одна з ключових частин платформи — власна адмін система для керування сервером і модерації.',
+      groups: [
+        {
+          title: 'Dashboard',
+          items: ['live online', 'current map', 'server IP', 'DatHost metrics'],
+        },
+        {
+          title: 'Server Management',
+          items: ['console commands', 'start/stop server', 'player management'],
+        },
+        {
+          title: 'Moderation',
+          items: ['bans', 'mutes', 'VIP management', 'admin management', 'audit logs'],
+        },
+      ],
+    },
+    {
+      Icon: FaTicketAlt,
+      title: 'Ticket System',
+      intro: 'Було створено повноцінну support систему. Особливу увагу було приділено UX для діалогів, вкладень і довгих повідомлень.',
+      groups: [
+        {
+          title: 'Features',
+          items: ['image uploads', 'live chat', 'admin replies', 'ticket statuses', 'sticky ticket lists', 'image lightbox', 'expandable history'],
+        },
+        {
+          title: 'UX details',
+          items: ['chat bubble styling', 'responsive layout', 'long text wrapping', 'modal previews', 'attachment handling'],
+        },
+      ],
+    },
+    {
+      Icon: FaChartLine,
+      title: 'Real-Time Server Integration',
+      intro: 'Сайт отримує дані в реальному часі, а оновлення відбувається автоматично кожні 30 секунд.',
+      groups: [
+        {
+          title: 'Live Server Data',
+          items: ['online players', 'server status', 'current map', 'server metrics', 'player lists'],
+        },
+        {
+          title: 'Technologies Used',
+          items: ['GameDig', 'DatHost API'],
+        },
+      ],
+    },
+    {
+      Icon: FaLayerGroup,
+      title: 'Responsive Experience',
+      intro: 'Було адаптовано основні частини інтерфейсу і додано мобільні патерни навігації.',
+      groups: [
+        {
+          title: 'Adapted areas',
+          items: ['Hero section', 'Navbar', 'Players', 'Tables', 'Comments system', 'Mobile menu'],
+        },
+        {
+          title: 'Added',
+          items: ['hamburger navigation', 'responsive grids', 'mobile-friendly layouts'],
+        },
+      ],
+    },
+  ];
 
 const engineeringFixes = [
   {
@@ -248,7 +249,7 @@ export function MyrMyrCaseStudy() {
             <span />
             <span />
           </div>
-          <img src="/projects/myr-myr-project.png" alt="MYR-MYR Project website screenshot" />
+          <SkeletonImage src="/projects/myr-myr-project.png" alt="MYR-MYR Project website screenshot" loading="eager" />
         </aside>
       </header>
 

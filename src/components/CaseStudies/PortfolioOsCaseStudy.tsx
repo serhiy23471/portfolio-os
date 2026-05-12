@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { FaCheck, FaCode, FaDesktop, FaGithub, FaLayerGroup, FaMobileAlt, FaMousePointer, FaProjectDiagram, FaReact, FaTerminal, FaTools, FaWindowMaximize } from 'react-icons/fa';
 import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const overviewItems = [
   'desktop OS metaphor',
@@ -30,7 +31,7 @@ const goals = [
 ];
 
 const techStack = [
-  { title: 'Frontend', items: ['React', 'TypeScript', 'Vite', 'CSS Modules / global CSS patterns'] },
+  { title: 'Frontend', items: ['React', 'TypeScript', 'Vite', 'global SCSS patterns'] },
   { title: 'State & Logic', items: ['Zustand', 'custom hooks', 'window manager state', 'terminal command parser'] },
   { title: 'UI / Experience', items: ['responsive layout', 'desktop metaphor', 'dark/light theme', 'animations', 'React Icons'] },
 ];
@@ -95,6 +96,11 @@ const engineeringFixes = [
     problem: 'портфоліо не мало повного роутингу, але case study потрібно відкривати як окрему сторінку',
     solution: 'легкий pathname-based render у App.tsx для окремих case study сторінок',
   },
+  {
+    title: 'Skeleton Loading',
+    problem: 'project preview і case study hero могли виглядати порожніми, поки браузер завантажує зображення',
+    solution: 'reusable SkeletonImage component з shimmer placeholder, loaded/error states і стабільним aspect-ratio контейнером',
+  },
 ];
 
 const results = [
@@ -103,6 +109,7 @@ const results = [
   'Separate mobile portfolio flow',
   'Data-driven content structure',
   'Project detail windows with case study links',
+  'Skeleton loading for project and case study previews',
   'Terminal, dock, boot screen and UI microinteractions',
   'Dark/light theme support',
   'Better storytelling than a static CV page',
@@ -185,7 +192,7 @@ export function PortfolioOsCaseStudy() {
             <span />
             <span />
           </div>
-          <img src="/projects/portfolio-os.png" alt="Portfolio OS screenshot" />
+          <SkeletonImage src="/projects/portfolio-os.png" alt="Portfolio OS screenshot" loading="eager" />
         </aside>
       </header>
 

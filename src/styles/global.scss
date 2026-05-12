@@ -82,15 +82,13 @@ svg {
   border: 3px solid transparent;
   border-radius: 999px;
   background:
-    linear-gradient(180deg, rgba(71, 85, 105, 0.62), rgba(37, 99, 235, 0.5))
-    border-box;
+    linear-gradient(180deg, rgba(71, 85, 105, 0.62), rgba(37, 99, 235, 0.5)) border-box;
   background-clip: padding-box;
 }
 
 *::-webkit-scrollbar-thumb:hover {
   background:
-    linear-gradient(180deg, rgba(71, 85, 105, 0.78), rgba(37, 99, 235, 0.7))
-    border-box;
+    linear-gradient(180deg, rgba(71, 85, 105, 0.78), rgba(37, 99, 235, 0.7)) border-box;
   background-clip: padding-box;
 }
 
@@ -1207,6 +1205,41 @@ p {
   background: #0f1117;
 }
 
+.imageSkeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.16) 42%, transparent 68%),
+    linear-gradient(135deg, rgba(148, 163, 184, 0.28), rgba(15, 23, 42, 0.34));
+  background-size: 220% 100%, 100% 100%;
+  animation: skeletonShimmer 1.15s ease-in-out infinite;
+}
+
+.imageSkeletonFallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.skeletonImage {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.skeletonImage.isLoaded {
+  opacity: 1;
+}
+
 .projectPreview.hasImage img,
 .projectHeroVisual.hasImage img,
 .mobileProjectPreview.hasImage img {
@@ -1217,6 +1250,7 @@ p {
 
 .projectPreview.hasImage::after,
 .projectHeroVisual.hasImage::after {
+  z-index: 2;
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.38));
@@ -1622,7 +1656,7 @@ p {
   font-weight: 900;
 }
 
-.certificatePreview > span:last-child {
+.certificatePreview>span:last-child {
   position: absolute;
   inset: auto 10px 10px;
   display: inline-flex;
@@ -1640,8 +1674,8 @@ p {
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.certificatePreview:hover > span:last-child,
-.certificatePreview:focus-visible > span:last-child {
+.certificatePreview:hover>span:last-child,
+.certificatePreview:focus-visible>span:last-child {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1884,7 +1918,7 @@ p {
   gap: 6px;
 }
 
-.contactForm label > span {
+.contactForm label>span {
   font-size: 12px;
   font-weight: 900;
 }
@@ -2080,6 +2114,7 @@ p {
 }
 
 .mobileProjectPreview {
+  position: relative;
   overflow: hidden;
   min-height: 120px;
   border-radius: var(--radius-md);
@@ -2152,15 +2187,13 @@ p {
 
 .desktopRoot[data-theme="dark"] *::-webkit-scrollbar-thumb {
   background:
-    linear-gradient(180deg, rgba(148, 163, 184, 0.72), rgba(96, 165, 250, 0.58))
-    border-box;
+    linear-gradient(180deg, rgba(148, 163, 184, 0.72), rgba(96, 165, 250, 0.58)) border-box;
   background-clip: padding-box;
 }
 
 .desktopRoot[data-theme="dark"] *::-webkit-scrollbar-thumb:hover {
   background:
-    linear-gradient(180deg, rgba(203, 213, 225, 0.86), rgba(96, 165, 250, 0.76))
-    border-box;
+    linear-gradient(180deg, rgba(203, 213, 225, 0.86), rgba(96, 165, 250, 0.76)) border-box;
   background-clip: padding-box;
 }
 
@@ -2394,6 +2427,7 @@ p {
 }
 
 @media (max-width: 960px) {
+
   .aboutApp,
   .contactApp,
   .detailGrid,
@@ -2411,6 +2445,7 @@ p {
     overflow: auto;
   }
 }
+
 /* React-rendered case study page */
 .caseStudyPage {
   min-height: 100vh;
@@ -2535,8 +2570,8 @@ p {
 }
 
 .caseStudyHero p,
-.caseStudySection > p,
-.caseStudyResult > p {
+.caseStudySection>p,
+.caseStudyResult>p {
   max-width: 780px;
   margin: 0;
   color: #cdb9b5;
@@ -2566,6 +2601,7 @@ p {
 }
 
 .caseStudyPreview {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
@@ -2603,6 +2639,11 @@ p {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top center;
+}
+
+.caseStudyPreview .imageSkeleton,
+.caseStudyPreview .imageSkeletonFallback {
+  top: 36px;
 }
 
 .caseStudySection,
@@ -2810,8 +2851,8 @@ p {
 .caseStudyPageGadgets .caseStudyNav a,
 .caseStudyPageGadgets .caseStudyBrand,
 .caseStudyPageGadgets .caseStudyHero p,
-.caseStudyPageGadgets .caseStudySection > p,
-.caseStudyPageGadgets .caseStudyResult > p,
+.caseStudyPageGadgets .caseStudySection>p,
+.caseStudyPageGadgets .caseStudyResult>p,
 .caseStudyPageGadgets .caseStudyCards p,
 .caseStudyPageGadgets .caseStudyColumns p,
 .caseStudyPageGadgets .caseStudyFeatureGrid p {
@@ -3282,6 +3323,7 @@ p {
 }
 
 @media (max-width: 900px) {
+
   .uiKitDemoShell,
   .uiKitDemoGrid,
   .uiKitStateGrid {
@@ -3295,6 +3337,7 @@ p {
 }
 
 @media (max-width: 900px) {
+
   .caseStudyHero,
   .caseStudyCards,
   .caseStudyColumns,

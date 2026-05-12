@@ -101,7 +101,7 @@ export function useTerminal({ onHireMe }: UseTerminalOptions) {
             '',
             `${profile.name} - ${profile.role}`,
             `${profile.location} | ${profile.email}`,
-            'Stack: React, TypeScript, CSS, Vite, Git',
+            'Stack: React, TypeScript, SCSS, Vite, Git',
           ].join('\n'),
         );
         break;

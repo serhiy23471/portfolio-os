@@ -6,6 +6,7 @@ import { projects, type ProjectCategory } from '../../data/projects';
 import { copy, getProjectText } from '../../i18n';
 import { useDesktopStore } from '../../store/desktopStore';
 import type { WindowId } from '../../types';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const categoryItems: Array<{ id: 'all' | ProjectCategory; labelKey: 'all' | 'web' | 'ui' | 'openSource'; Icon: IconType }> = [
   { id: 'all', labelKey: 'all', Icon: FaFolderOpen },
@@ -80,7 +81,7 @@ export function ProjectsApp() {
               >
                 <div className={`projectPreview ${project.imageUrl ? 'hasImage' : ''}`} aria-hidden="true">
                   {project.imageUrl ? (
-                    <img src={project.imageUrl} alt="" loading="lazy" />
+                    <SkeletonImage src={project.imageUrl} alt="" loading="lazy" />
                   ) : (
                     <>
                       <span className="previewChrome" />

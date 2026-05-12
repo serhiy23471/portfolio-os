@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { FaCheck, FaCode, FaGithub, FaKeyboard, FaLayerGroup, FaPalette, FaReact, FaUniversalAccess } from 'react-icons/fa';
 import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const overviewItems = [
   'варіанти кнопок',
@@ -145,7 +146,7 @@ export function UiKitCaseStudy() {
             <span />
             <span />
           </div>
-          <img src="/projects/ui-kit.svg" alt="Прев'ю компонентів UI Kit" />
+          <SkeletonImage src="/projects/ui-kit.svg" alt="Прев'ю компонентів UI Kit" loading="eager" />
         </aside>
       </header>
 

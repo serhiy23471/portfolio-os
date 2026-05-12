@@ -3,6 +3,7 @@ import { FaExternalLinkAlt, FaFileAlt, FaGithub } from 'react-icons/fa';
 import { projects } from '../../data/projects';
 import { copy, getProjectText } from '../../i18n';
 import { useDesktopStore } from '../../store/desktopStore';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 interface ProjectDetailAppProps {
   slug: string;
@@ -23,7 +24,7 @@ export function ProjectDetailApp({ slug }: ProjectDetailAppProps) {
     <article className="projectDetail appSurface" style={{ '--project-accent': project.accent } as CSSProperties}>
       <div className={`projectHeroVisual ${project.imageUrl ? 'hasImage' : ''}`} aria-hidden="true">
         {project.imageUrl ? (
-          <img src={project.imageUrl} alt="" />
+          <SkeletonImage src={project.imageUrl} alt="" loading="eager" />
         ) : (
           <>
             <span className="heroWindowBar" />

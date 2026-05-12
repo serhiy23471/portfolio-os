@@ -14,6 +14,7 @@ import {
   FaShoppingCart,
 } from 'react-icons/fa';
 import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const overviewItems = [
   'phone catalog',
@@ -200,7 +201,7 @@ export function NiceGadgetsCaseStudy() {
             <span />
             <span />
           </div>
-          <img src="/projects/nice-gadgets.png" alt="Nice Gadgets catalog screenshot" />
+          <SkeletonImage src="/projects/nice-gadgets.png" alt="Nice Gadgets catalog screenshot" loading="eager" />
         </aside>
       </header>
 

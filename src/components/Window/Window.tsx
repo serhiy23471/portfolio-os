@@ -154,16 +154,16 @@ export function Window({ window, children }: WindowProps) {
 
   const frameStyle: CSSProperties = window.isMaximized
     ? {
-        zIndex: window.zIndex,
-      }
+      zIndex: window.zIndex,
+    }
     : {
-        width: window.size.width,
-        height: window.size.height,
-        '--window-x': `${window.position.x}px`,
-        '--window-y': `${window.position.y}px`,
-        transform: `translate3d(${window.position.x}px, ${window.position.y}px, 0)`,
-        zIndex: window.zIndex,
-      } as CSSProperties;
+      width: window.size.width,
+      height: window.size.height,
+      '--window-x': `${window.position.x}px`,
+      '--window-y': `${window.position.y}px`,
+      transform: `translate3d(${window.position.x}px, ${window.position.y}px, 0)`,
+      zIndex: window.zIndex,
+    } as CSSProperties;
 
   return (
     <section

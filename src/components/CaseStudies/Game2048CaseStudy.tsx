@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa';
 import { useDesktopStore } from '../../store/desktopStore';
 import { CaseStudyLanguageSwitch } from './CaseStudyLanguageSwitch';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const copy = {
   uk: {
@@ -304,7 +305,7 @@ export function Game2048CaseStudy() {
             <span />
             <span />
           </div>
-          <img src="/projects/game-2048.png" alt="2048 game screenshot" />
+          <SkeletonImage src="/projects/game-2048.png" alt="2048 game screenshot" loading="eager" />
         </aside>
       </header>
 

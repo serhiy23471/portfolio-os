@@ -1,6 +1,6 @@
 # Portfolio OS
 
-**Portfolio OS** is an interactive frontend portfolio built as a desktop-style operating system. It includes draggable windows, a dock, boot sequence, terminal, project cards, case studies, theme switching, language switching, and a responsive mobile version.
+**Portfolio OS** is an interactive frontend portfolio built as a desktop-style operating system. It includes draggable windows, a dock, boot sequence, terminal, project cards, skeleton image loading, case studies, theme switching, language switching, and a responsive mobile version.
 
 ## Live Preview
 
@@ -16,7 +16,7 @@ The project is inspired by desktop operating systems: apps open in windows, proj
 - TypeScript
 - Vite
 - Zustand
-- CSS / SCSS-style global styling
+- SCSS
 - React Icons
 - Vercel
 
@@ -40,6 +40,7 @@ The project is inspired by desktop operating systems: apps open in windows, proj
 - Desktop-style portfolio interface with windows, dock, menubar, and app icons
 - Boot sequence before the main portfolio appears
 - Project cards with live demo, GitHub, and case study links
+- Skeleton loading placeholders for project and case study previews
 - Dedicated case study pages for selected projects
 - Vercel routing support for direct case study URLs
 - Terminal app with portfolio commands
@@ -53,5 +54,5 @@ The project is inspired by desktop operating systems: apps open in windows, proj
 - `src/components` - UI components, desktop apps, mobile portfolio, and case studies
 - `src/data` - editable portfolio content
 - `src/store` - Zustand desktop state
-- `src/styles` - global styles, variables, and animations
+- `src/styles` - SCSS variables, animations, and global styles
 - `public` - project images, certificates, and static fallback pages

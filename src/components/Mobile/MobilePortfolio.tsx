@@ -7,6 +7,7 @@ import { skills } from '../../data/skills';
 import { useTypewriter } from '../../hooks/useTypewriter';
 import { copy, getExperienceText, getProjectText } from '../../i18n';
 import { useDesktopStore } from '../../store/desktopStore';
+import { SkeletonImage } from '../UI/SkeletonImage';
 
 const navItems = [
   { id: 'about', label: 'About' },
@@ -107,7 +108,7 @@ export function MobilePortfolio() {
           return (
             <article className="mobileProject" key={project.slug}>
               <div className={`mobileProjectPreview ${project.imageUrl ? 'hasImage' : ''}`} style={{ background: project.accent }} aria-hidden="true">
-                {project.imageUrl && <img src={project.imageUrl} alt="" loading="lazy" />}
+                {project.imageUrl && <SkeletonImage src={project.imageUrl} alt="" loading="lazy" />}
               </div>
               <h3>{project.name}</h3>
               <p>{project.description}</p>
