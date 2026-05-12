@@ -51,7 +51,7 @@ export const portfolioProjects: Project[] = [
     category: 'web',
     description: 'Сайт для українського CS2 community. Server з ігровою атмосферою, позиціонуванням сервера і блоками ключових можливостей.',
     problem: 'Серверу потрібна зрозуміла публічна сторінка, яка швидко пояснює гравцям переваги: SkinChanger, статистика, VIP, competitive і fun gameplay.',
-    solution: 'Зробив сфокусований gaming page з темним візуальним стилем, SEO/meta для соцмереж, блоками фіч і прямим live-доменом.',
+    solution: 'Зробив сфокусований gaming website з темним візуальним стилем, SEO/meta для соцмереж, блоками фіч і прямим live-доменом.',
     stack: ['React', 'SCSS', 'JavaScript', 'Node.js'],
     stars: 0,
     forks: 0,
