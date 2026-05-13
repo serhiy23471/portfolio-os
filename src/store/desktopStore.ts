@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { projects } from '../data/projects';
 import type { Language, PortfolioWindow, Position, Size, TerminalEntry, Theme, Toast, WindowId } from '../types';
+import { playSystemSound } from '../utils/sounds';
 
 const THEME_STORAGE_KEY = 'portfolio-os-theme';
 const LANGUAGE_STORAGE_KEY = 'portfolio-os-language';
@@ -169,6 +170,7 @@ export const useDesktopStore = create<DesktopState>((set, get) => ({
   openWindow: (id) => {
     const window = get().windows[id];
     if (!window) return;
+    const shouldPlaySound = !window.isOpen || window.isMinimized;
 
     set((state) => {
       const zIndex = state.nextZIndex + 1;
@@ -186,9 +188,13 @@ export const useDesktopStore = create<DesktopState>((set, get) => ({
         nextZIndex: zIndex,
       };
     });
+    if (shouldPlaySound) playSystemSound('open');
   },
 
   closeWindow: (id) => {
+    const window = get().windows[id];
+    if (window?.isOpen) playSystemSound('close');
+
     set((state) => {
       const nextWindows = {
         ...state.windows,
@@ -309,12 +315,14 @@ export const useDesktopStore = create<DesktopState>((set, get) => ({
     set((state) => {
       const theme = state.theme === 'light' ? 'dark' : 'light';
       window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+      playSystemSound('switch');
       return { theme };
     }),
   toggleLanguage: () =>
     set((state) => {
       const language = state.language === 'uk' ? 'en' : 'uk';
       window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+      playSystemSound('switch');
       return { language };
     }),
   cycleWallpaper: () => set((state) => ({ wallpaperVariant: (state.wallpaperVariant + 1) % 3 })),
