@@ -162,11 +162,11 @@ export function NiceGadgetsCaseStudy() {
         </a>
         <div>
           <a href="/">Portfolio</a>
-          <a href="https://github.com/serhiy23471/react_phone-catalog/tree/develop" target="_blank" rel="noreferrer">
+          <a href="https://github.com/serhiy23471/gadgets-store" target="_blank" rel="noreferrer">
             <FaGithub aria-hidden="true" />
             GitHub
           </a>
-          <a className="isPrimary" href="https://serhiy23471.github.io/react_phone-catalog/#/" target="_blank" rel="noreferrer">
+          <a className="isPrimary" href="https://gadgets-store-five.vercel.app/" target="_blank" rel="noreferrer">
             Live Demo
           </a>
           <CaseStudyLanguageSwitch />

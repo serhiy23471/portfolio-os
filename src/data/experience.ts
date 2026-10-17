@@ -26,7 +26,7 @@ export const experience: ExperienceItem[] = [
       'Опрацював блоки з ключовими можливостями сервера: SkinChanger, статистика, VIP, competitive і fun gameplay.',
       'Налаштував адаптивність, продуктивність, базову оптимізацію сторінки і підготовку до публічного запуску.',
     ],
-    url: 'https://myr-myr.fun/',
+    url: 'https://test-project-myr-myr.vercel.app/',
   },
   {
     id: 'portfolio-os',

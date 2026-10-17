@@ -210,11 +210,11 @@ export function MyrMyrCaseStudy() {
         </a>
         <div>
           <a href="/">Portfolio</a>
-          <a href="https://github.com/serhiy23471/myr-myr-project" target="_blank" rel="noreferrer">
+          <a href="https://github.com/serhiy23471/Test-Project-Myr-Myr" target="_blank" rel="noreferrer">
             <FaGithub aria-hidden="true" />
             GitHub
           </a>
-          <a className="isPrimary" href="https://myr-myr.fun/" target="_blank" rel="noreferrer">
+          <a className="isPrimary" href="https://test-project-myr-myr.vercel.app/" target="_blank" rel="noreferrer">
             Live Project
           </a>
           <CaseStudyLanguageSwitch />
