@@ -1,58 +1,112 @@
-# Portfolio OS
+﻿# 🖥️ Portfolio OS — Interactive Developer Portfolio
 
-**Portfolio OS** is an interactive frontend portfolio built as a desktop-style operating system. It includes draggable windows, a dock, boot sequence, terminal, project cards, skeleton image loading, case studies, theme switching, language switching, and a responsive mobile version.
+An interactive developer portfolio presented as a desktop-style operating system, built with React and TypeScript.
 
-## Live Preview
+**[Live Demo](https://portfolio-os-lovat.vercel.app/)**
 
-[Open Portfolio OS](https://portfolio-os-lovat.vercel.app/)
+---
 
-## Design Concept
+## 📋 About the Project
 
-The project is inspired by desktop operating systems: apps open in windows, projects behave like separate app details, and the portfolio feels more interactive than a static CV page.
+Portfolio OS turns a personal portfolio into a desktop interface. Visitors can open apps in windows, browse projects and case studies, explore skills and experience, and use a terminal with portfolio commands. A mobile layout provides a responsive way to access the same portfolio content on smaller screens.
 
-## Technologies Used
+---
 
-- React
-- TypeScript
-- Vite
-- Zustand
-- SCSS
-- React Icons
-- Vercel
+## ✅ Features
 
-## Getting Started
+- **Desktop interface** — wallpaper, desktop icons, menubar, dock, and app windows
+- **Window controls** — open, focus, drag, minimize, and close windows
+- **Boot sequence** — animated startup before the portfolio desktop appears
+- **Portfolio apps** — About, Projects, Skills, Work, Contact, and Terminal
+- **Project details** — project summaries, links, and dedicated case studies
+- **Case studies** — detailed pages for selected projects, including Nice Gadgets
+- **Terminal** — interactive commands for exploring portfolio information
+- **Themes** — switch between light and dark appearance
+- **Languages** — switch between English and Ukrainian
+- **Responsive layout** — mobile portfolio experience for smaller screens
+- **Data-driven content** — profile, projects, skills, and experience maintained in `src/data`
+- **Sound effects** — audio feedback for selected interface interactions
 
-### Clone the repository
+---
 
-- git clone https://github.com/serhiy23471/portfolio-os.git
-- cd portfolio-os
-- npm install
-- npm run dev
+## 🛠 Tech Stack
 
-## Available Scripts
+| Category | Technology |
+|----------|------------|
+| UI | React 18 |
+| Language | TypeScript |
+| Routing | React Router v6 |
+| State | Zustand |
+| Styling | SCSS |
+| Icons | Lucide React, React Icons |
+| Build tool | Vite |
+| Deployment | Vercel |
 
-- `npm run dev` - start local development server
-- `npm run build` - build production files
-- `npm run preview` - preview production build locally
+---
 
-## Features
+## 📁 Project Structure
 
-- Desktop-style portfolio interface with windows, dock, menubar, and app icons
-- Boot sequence before the main portfolio appears
-- Project cards with live demo, GitHub, and case study links
-- Skeleton loading placeholders for project and case study previews
-- Dedicated case study pages for selected projects
-- Vercel routing support for direct case study URLs
-- Terminal app with portfolio commands
-- Light and dark theme switching
-- Ukrainian and English language switching
-- Responsive mobile portfolio fallback
-- Data-driven profile, projects, skills, certificates, and experience
+```text
+src/
+├── components/
+│   ├── Apps/          # Portfolio apps and project details
+│   ├── Boot/          # Startup sequence
+│   ├── CaseStudies/  # Case study pages
+│   ├── Desktop/      # Desktop, dock, menubar, and icons
+│   ├── Demos/        # Interactive demos
+│   ├── Mobile/       # Responsive mobile portfolio
+│   ├── UI/           # Shared interface components
+│   └── Window/       # Window frame and controls
+├── data/             # Profile, projects, skills, and experience
+├── hooks/            # Shared React hooks
+├── store/            # Zustand desktop state
+├── styles/           # Global styles, variables, and animations
+├── types.ts          # Shared TypeScript types
+└── i18n.ts           # Language configuration
+public/
+├── case-studies/     # Static case study pages
+├── certificates/     # Certificate documents
+├── projects/         # Project preview images
+└── sounds/           # Interface sound effects
+```
 
-## Project Structure
+---
 
-- `src/components` - UI components, desktop apps, mobile portfolio, and case studies
-- `src/data` - editable portfolio content
-- `src/store` - Zustand desktop state
-- `src/styles` - SCSS variables, animations, and global styles
-- `public` - project images, certificates, and static fallback pages
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/serhiy23471/portfolio-os.git
+cd portfolio-os
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Production build
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 Deployment
+
+The project is deployed on Vercel. Routing rewrites are configured in `vercel.json` to support direct access to portfolio and case study routes.
